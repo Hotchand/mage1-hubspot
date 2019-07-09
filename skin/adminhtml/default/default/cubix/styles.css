@@ -1,0 +1,41 @@
+ul.tabs a.cubix-section span {
+    background: url(favicon-hubspot.png) no-repeat 18px 3px;
+    background-size: 23px;
+    overflow: hidden;
+    padding: 5px 0 5px 50px;
+}
+ul.tabs a.cubix-section:hover span {
+    background: #D8E6E6 url(favicon-hubspot.png) no-repeat 18px 3px;
+    background-size: 23px;
+    padding: 5px 0 5px 50px;
+}
+#cubix-info {
+    float:left;
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 7px;
+}
+#cubix-info img {
+    float:left;
+    width:50px;
+}
+#cubix-info a {
+    color:#378FE2!important;
+    margin: 0;
+}
+#cubix-info .text {
+    float:left;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+#cubix_import_status {
+    font-weight: bold;
+    vertical-align: middle;
+    display: flex;
+    padding: 10px 0;
+}
+#cubix_import_status img {
+    margin-right: 5px;
+}

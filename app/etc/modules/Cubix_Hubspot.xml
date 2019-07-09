@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<config>
+  <modules>
+    <Cubix_Hubspot>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Cubix_Hubspot>
+  </modules>
+</config>

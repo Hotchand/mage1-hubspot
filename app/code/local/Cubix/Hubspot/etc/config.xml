@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package    Cubix_Hubspot
+ * @author     Hotchand Sajnani <hotchand.sukhram@cubixlabs.com>
+ */
+ -->
+<config>
+    <modules>
+        <Cubix_Hubspot>
+            <version>0.1.0</version>
+        </Cubix_Hubspot>
+    </modules>
+    <frontend>
+    	<layout>
+            <updates>
+                <cubix_hubspot>
+                    <file>cubix_hubspot.xml</file>
+                </cubix_hubspot>
+            </updates>
+        </layout>        
+    </frontend>
+    <global>
+    <helpers>
+      <cubix_hubspot>
+        <class>Cubix_Hubspot_Helper</class>
+      </cubix_hubspot>
+    </helpers>
+	<models>
+	  <cubix_hubspot>
+		<class>Cubix_Hubspot_Model</class>
+		<resourceModel>hubspot_mysql4</resourceModel>
+	  </cubix_hubspot>
+	</models>
+	<blocks>
+		<cubix_hubspot>
+			<class>Cubix_Hubspot_Block</class>
+		</cubix_hubspot>
+	</blocks>
+    <events>	  
+	  <checkout_onepage_controller_success_action>
+			<observers>
+				<hubspot_order_success>
+					<type>model</type> <!-- class method call type; valid are model, object and singleton -->
+					<class>cubix_hubspot/observer</class> <!-- observers class alias -->
+					<method>OrderCreate</method>  <!-- observer's method to be called -->
+					<args></args> <!-- additional arguments passed to observer -->
+				</hubspot_order_success>
+			</observers>
+		</checkout_onepage_controller_success_action>
+		<checkout_multishipping_controller_success_action>
+			<observers>
+				<hubspot_order_success>
+					<type>model</type> <!-- class method call type; valid are model, object and singleton -->
+					<class>cubix_hubspot/observer</class> <!-- observers class alias -->
+					<method>OrderCreate</method>  <!-- observer's method to be called -->
+					<args></args> <!-- additional arguments passed to observer -->
+				</hubspot_order_success>
+			</observers>
+		</checkout_multishipping_controller_success_action>			
+	  <customer_register_success> <!-- identifier of the event we want to catch -->
+        <observers>
+          <customer_register_success_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>cubix_hubspot/observer</class> <!-- observers class alias -->
+            <method>CreateContactRecord</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </customer_register_success_handler>
+        </observers>
+      </customer_register_success>
+    </events>
+  </global>
+    <admin>
+        <routers>
+            <cubix_hubspot>
+                <use>admin</use>
+                <args>
+                    <module>Cubix_Hubspot</module>
+                    <frontName>cubix_hubspot</frontName>
+                </args>
+            </cubix_hubspot>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <cubix_hubspot>
+                    <file>cubix_hubspot.xml</file>
+                </cubix_hubspot>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <cubix_hubspot_settings>
+            <settings>
+                <enable>0</enable>
+            </settings>
+        </cubix_hubspot_settings>
+    </default>
+</config>

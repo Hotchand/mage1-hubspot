@@ -1,0 +1,9 @@
+app/code/local/Cubix/Hubspot/* app/code/local/Cubix/Hubspot/
+app/etc/modules/Cubix_Hubspot.xml          app/etc/modules/Cubix_Hubspot.xml
+app/design/frontend/base/default/layout/cubix_hubspot.xml app/design/frontend/base/default/layout/cubix_hubspot.xml
+app/design/adminhtml/default/default/template/cubix/system/config/button.phtml app/design/adminhtml/default/default/template/cubix/system/config/button.phtml
+app/design/adminhtml/default/default/layout/cubix_hubspot.xml app/design/adminhtml/default/default/layout/cubix_hubspot.xml
+skin/adminhtml/default/default/cubix/styles.css skin/adminhtml/default/default/cubix/styles.css
+skin/adminhtml/default/default/cubix/logo.png skin/adminhtml/default/default/cubix/logo.png
+skin/adminhtml/default/default/metrilo/favicon-hubspot.png skin/adminhtml/default/default/cubix/favicon-hubspot.png
+skin/adminhtml/default/default/cubix/loader.gif skin/adminhtml/default/default/cubix/loader.gif
